@@ -1,4 +1,5 @@
 import pygame
+import random 
 
 class Firework(object):
     def __init__(self, x_pos):
@@ -28,7 +29,10 @@ class Firework(object):
         elif self.state == "DEAD":
             # Finished exploding - so reset
             self.countdown = 10
-            self.y = 400
+
+            #   print random.randint(1,101)
+            self.x = random.randint(10, 490)
+            self.y = 410
             self.circle_size = 0
             self.state = "ALIVE"
 
